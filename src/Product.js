@@ -13,14 +13,28 @@ function Product(props) {
     console.log(voteCount);
   }
   return (
-    <div className="productDetails">
-      <img src={props.img_url}></img>
-      <p> Product Name:{props.name} </p>
-      <p> Product description:{props.description}</p>
-      <p id="voteCount"> Vote Count: {voteCount}</p>
-      <button name="b1" id="b1" onClick={likeHandler}>
-        Upvote
-      </button>
+    <div className="row">
+      <div className="productDetails">
+        <img src={props.img_url}></img>
+      </div>
+      <div div className="pDetails">
+        <p>
+          {" "}
+          <b>Product Name: </b>
+          {props.name}{" "}
+        </p>
+        <p>
+          {" "}
+          <b>Product Description: </b>
+          {props.description}
+        </p>
+        <p id="voteCount">
+          <b> Vote Count: </b> {voteCount}
+        </p>
+        <button name="b1" id="b1" onClick={likeHandler}>
+          Upvote
+        </button>
+      </div>
     </div>
   );
 }
